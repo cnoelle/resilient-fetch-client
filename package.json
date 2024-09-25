@@ -1,6 +1,6 @@
 {
   "name": "resilient-fetch-client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An http client based on native fetch with added resilience features and caching.",
   "private": true,
   "type": "module",
@@ -27,7 +27,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
   ],
   "keywords": [
     "fetch",
@@ -37,7 +38,7 @@
     "client"
   ],
   "author": "cnoelle",
-  "license": "",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cnoelle/resilient-fetch-client.git"
