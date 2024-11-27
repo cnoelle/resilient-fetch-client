@@ -25,6 +25,12 @@ Design principles:
 * Written in Typescript and compiled to modern Javascript as ESM modules.
 * Targeting mainly browsers, but should work in a recent NodeJS as well.
 
+Installation: 
+
+```bash
+npm install resilient-fetch-client
+```
+
 Basic usage:
 
 ```javascript
