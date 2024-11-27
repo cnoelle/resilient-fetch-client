@@ -57,7 +57,7 @@ export class ResilientFetchClient extends SimpleFetchClient {
             circuitBrk = options?.circuitBreaker ? circuitBreaker(circuitHandler, 
                 {breaker: new ConsecutiveBreaker(options.circuitBreaker.openAfterFailedAttempts), halfOpenAfter: options.circuitBreaker.halfOpenAfter}) : undefined;
         }
-        const tout = options?.timeoutRequest! > 0 ? timeout(options!.timeoutRequest!, TimeoutStrategy.Aggressive) : undefined;
+        const tout = options?.timeoutRequest! > 0 ? timeout(options!.timeoutRequest!, {strategy: TimeoutStrategy.Aggressive, abortOnReturn: false}) : undefined;
         const bulkhd = options?.parallelRequests ? bulkhead(options.parallelRequests.maxParallelRequests, options.parallelRequests.maxQueuedRequests) : undefined;
         const retryConfig: Partial<RetryConfig> = typeof options?.retries === "object" ? options.retries : {};
         let retryPolicy = undefined;
