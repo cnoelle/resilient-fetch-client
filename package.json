@@ -1,6 +1,6 @@
 {
   "name": "resilient-fetch-client",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An http client based on native fetch with added resilience features and caching.",
   "private": true,
   "type": "module",
