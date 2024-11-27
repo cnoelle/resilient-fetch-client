@@ -17,7 +17,7 @@ export class SimpleFetchClient implements FetchClient {
             defaultHeadersByMethod?: Record<MethodName, HeadersInit>,
             skipFailOnErrorCode?: boolean
         ) {
-        this.#fetch = fetch || globalThis.fetch;
+        this.#fetch = fetch || globalThis.fetch.bind(globalThis);
         this.#baseUrl = baseUrl;
         this.#defaultHeaders = defaultHeaders;
         this.#defaultHeadersByMethod = defaultHeadersByMethod;
